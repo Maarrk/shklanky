@@ -2,9 +2,10 @@
   "manifest_version": 2,
   "name": "shklanky",
   "description": "Ring a bell every half hour in a pattern used on ships",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "icons": {
-    "64": "icons/icon.png"
+    "48": "icons/bell-48.png",
+    "96": "icons/bell-96.png"
   },
   "permissions": [
     "alarms",
@@ -15,7 +16,7 @@
   },
   "browser_action": {
     "default_icon": {
-      "64": "icons/icon.png"
+      "64": "icons/bell-64.png"
     },
     "default_popup": "browserAction/index.html",
     "default_title": "shklanky"
