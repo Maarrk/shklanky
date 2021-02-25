@@ -4,7 +4,11 @@
         "es6": true,
         "webextensions": true
     },
+    "plugins": [
+      "html"
+    ],
     "extends": [
-      "eslint:recommended"
+      "eslint:recommended",
+      "plugin:prettier/recommended"
     ]
 }
