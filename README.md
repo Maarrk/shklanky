@@ -1,13 +1,15 @@
 # shklanky
+
 Browser extension to ring a bell every half hour in a [pattern used on ships](https://en.wikipedia.org/wiki/Ship%27s_bell#Strikes_of_the_ship's_bell).
 
 ## TODO
+
 - [x] Create extension
 - [x] Play sound from a background script
 - [x] Show notification
 - [x] Create a basic icon
 - [x] Schedule playing with `alarm`
-- [ ] Setup linter
+- [x] Setup linter
 - [ ] Communicate with `browserAction` popup
 - [ ] Implement [persistent](https://extensionworkshop.com/documentation/develop/testing-persistent-and-restart-features/) options
 - [ ] Record own bell sounds
