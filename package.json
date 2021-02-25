@@ -1,0 +1,19 @@
+{
+  "name": "shklanky",
+  "version": "0.0.3",
+  "description": "Firefox extension to ring a bell every half hour in a pattern used on ships",
+  "homepage": "https://github.com/Maarrk/shklanky#readme",
+  "license": "MIT",
+  "author": {
+    "name": "Marek S. Łukasiewicz",
+    "email": "marek@lukasiewicz.tech"
+  },
+  "repository": "github:Maarrk/shklanky",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0"
+  }
+}
