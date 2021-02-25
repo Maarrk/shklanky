@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "shklanky",
   "description": "Ring a bell every half hour in a pattern used on ships",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "icons": {
     "48": "icons/bell-48.png",
     "96": "icons/bell-96.png"
