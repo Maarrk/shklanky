@@ -6,10 +6,12 @@
   "icons": {
     "64": "icons/icon.png"
   },
+  "permissions": [
+    "alarms",
+    "notifications"
+  ],
   "background": {
-    "scripts": [
-      "background_script.js"
-    ]
+    "page": "background-page.html"
   },
   "browser_action": {
     "default_icon": {
@@ -17,5 +19,8 @@
     },
     "default_popup": "browserAction/index.html",
     "default_title": "shklanky"
-  }
+  },
+  "web_accessible_resources": [
+    "sounds/*.mp3"
+  ]
 }
