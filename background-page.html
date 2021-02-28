@@ -5,7 +5,13 @@
     <script type="module" src="background-script.js"></script>
   </head>
   <body>
-    <audio src="sounds/single.mp3" id="audioSingle"></audio>
-    <audio src="sounds/double.mp3" id="audioDouble"></audio>
+    <audio id="audioSingle">
+      <source src="sounds/single.mp3" type="audio/mpeg" />
+      <source src="sounds/single.ogg" type="audio/ogg" />
+    </audio>
+    <audio id="audioDouble">
+      <source src="sounds/double.mp3" type="audio/mpeg" />
+      <source src="sounds/double.ogg" type="audio/ogg" />
+    </audio>
   </body>
 </html>
