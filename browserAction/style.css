@@ -10,6 +10,10 @@ button {
   padding: 3px 5px;
 }
 
+.button-wrapper > button {
+  display: block;
+}
+
 .radiobutton-wrapper > span {
   display: block;
 }

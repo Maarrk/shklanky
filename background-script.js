@@ -1,6 +1,7 @@
 var options = {
   // specifies default options
   notificationMethod: 'both',
+  mutedUntilDate: 0,
 }
 function updateOptions() {
   browser.storage.sync.get(options).then((results) => {
@@ -10,10 +11,10 @@ function updateOptions() {
 updateOptions()
 
 function strikesCount() {
-  var strikes = 0
-  var date = new Date()
-  var hours = date.getHours()
-  var minutes = date.getMinutes()
+  let strikes = 0
+  let date = new Date()
+  let hours = date.getHours()
+  let minutes = date.getMinutes()
   if (minutes >= 45) {
     hours += 1
   }
@@ -45,8 +46,71 @@ function playNextSound() {
 audioSingle.addEventListener('ended', playNextSound)
 audioDouble.addEventListener('ended', playNextSound)
 
+var nextStrikesMuted = false
+var sessionStrikesMuted = false
+function isMuted() {
+  if (nextStrikesMuted) {
+    return true
+  }
+  if (sessionStrikesMuted) {
+    return true
+  }
+  let date = new Date()
+  if (options.mutedUntilDate > date.getTime()) {
+    return true
+  }
+  return false
+}
+
+function notifyMuteChanged() {
+  browser.runtime.sendMessage({
+    action: 'muteChanged',
+    muted: isMuted(),
+  })
+}
+
+function mute(until) {
+  if (until == 'next') {
+    nextStrikesMuted = true
+  } else if (until == 'restart') {
+    sessionStrikesMuted = true
+  } else if (until == 'watch') {
+    let date = new Date()
+    let hours = date.getHours()
+    hours -= hours % 4
+    hours += 3
+    date.setHours(hours)
+    date.setMinutes(59)
+
+    options.mutedUntilDate = date.getTime()
+    browser.storage.sync.set(options)
+  } else if (until == 'permanent') {
+    let date = new Date()
+    date.setFullYear(date.getFullYear() + 1000)
+    options.mutedUntilDate = date.getTime()
+    browser.storage.sync.set(options)
+  }
+
+  notifyMuteChanged()
+}
+function unmute() {
+  nextStrikesMuted = false
+  sessionStrikesMuted = false
+  options.mutedUntilDate = 0
+  browser.storage.sync.set(options)
+  notifyMuteChanged()
+}
+
 const notifIconUrl = browser.extension.getURL('icons/bell-96.png')
 function handleBellTime() {
+  if (isMuted()) {
+    if (nextStrikesMuted) {
+      nextStrikesMuted = false
+      notifyMuteChanged()
+    }
+    return
+  }
+
   strikesLeft = strikesCount()
   if (
     options.notificationMethod == 'both' ||
@@ -69,9 +133,9 @@ function handleBellTime() {
 }
 
 function scheduleBells() {
-  var date = new Date()
-  var hours = date.getHours()
-  var minutes = date.getMinutes()
+  let date = new Date()
+  let hours = date.getHours()
+  let minutes = date.getMinutes()
   if (minutes >= 30) {
     date.setHours(hours + 1)
     date.setMinutes(0)
@@ -94,6 +158,12 @@ function handleMessage(message) {
     handleBellTime()
   } else if (message.action == 'optionsChanged') {
     updateOptions()
+  } else if (message.action == 'mute') {
+    mute(message.until)
+  } else if (message.action == 'unmute') {
+    unmute()
+  } else if (message.action == 'getMute') {
+    notifyMuteChanged()
   }
 }
 browser.runtime.onMessage.addListener(handleMessage)
