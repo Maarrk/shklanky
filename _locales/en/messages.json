@@ -1,0 +1,27 @@
+{
+  "extensionName": {
+    "message": "Shklanky",
+    "description": "Name of the extension."
+  },
+
+  "extensionDescription": {
+    "message": "Ring a bell every half hour in a pattern used on ships.",
+    "description": "Description of the extension."
+  },
+
+  "notificationTitle": {
+    "message": "Bell's ringing",
+    "description": "Title of the notification."
+  },
+
+  "notificationContent": {
+    "message": "$STRIKES$ strike(s)",
+    "description": "Content of the notification.",
+    "placeholders": {
+      "strikes" : {
+        "content" : "$1",
+        "example" : "8"
+      }
+    }
+  }
+}

@@ -1,7 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "shklanky",
-  "description": "Ring a bell every half hour in a pattern used on ships",
+  "name": "__MSG_extensionName__",
+  "default_locale": "en",
+  "description": "__MSG_extensionDescription__",
   "version": "0.0.3",
   "icons": {
     "48": "icons/bell-48.png",

@@ -1,0 +1,27 @@
+{
+  "extensionName": {
+    "message": "Szklanki",
+    "description": "Name of the extension."
+  },
+
+  "extensionDescription": {
+    "message": "Co pół godziny wybija dzwonem obecną godzinę w sposób przyjęty na statkach.",
+    "description": "Description of the extension."
+  },
+
+  "notificationTitle": {
+    "message": "Szklanki",
+    "description": "Title of the notification."
+  },
+
+  "notificationContent": {
+    "message": "$STRIKES$ uderzeń",
+    "description": "Content of the notification.",
+    "placeholders": {
+      "strikes" : {
+        "content" : "$1",
+        "example" : "8"
+      }
+    }
+  }
+}

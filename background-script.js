@@ -122,15 +122,17 @@ function handleBellTime() {
     options.notificationMethod == 'both' ||
     options.notificationMethod == 'notification'
   ) {
-    browser.notifications.create({
+    browser.notifications.create('bellTime', {
       type: 'basic',
       iconUrl: notifIconUrl,
-      title: 'Szklanki',
-      message: `${strikesLeft} uderzeń w dzwon${
-        options.notificationMethod == 'both' ? '\n\n(kliknij aby wyciszyć)' : ''
-      }`,
+      title: browser.i18n.getMessage('notificationTitle'),
+      message: browser.i18n.getMessage('notificationContent', strikesLeft),
       // notification buttons are not supported as of firefox 86.0
     })
+
+    // this will clear prematurely if replayed before time elapsed
+    // but doesn't happen in normal operation every 30 minutes
+    setTimeout(() => browser.notifications.clear('bellTime'), 4500)
   }
   if (
     options.notificationMethod == 'both' ||
