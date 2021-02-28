@@ -9,26 +9,61 @@ function updateOptions() {
 }
 updateOptions()
 
-function handleBellTime() {
-  const iconUrl = browser.extension.getURL('icons/bell-96.png')
-  if (
-    options.notificationMethod == 'both' ||
-    options.notificationMethod == 'sound'
-  ) {
-    var element = document.getElementById('audioSingle')
-    element.fastSeek(0)
-    element.play()
+function strikesCount() {
+  var strikes = 0
+  var date = new Date()
+  var hours = date.getHours()
+  var minutes = date.getMinutes()
+  if (minutes >= 45) {
+    hours += 1
   }
+  strikes = 2 * (hours % 4)
+  if (minutes >= 15 && minutes < 45) {
+    strikes += 1
+  }
+  if (strikes == 0) {
+    // end of watch
+    strikes = 8
+  }
+  return strikes
+}
+
+var strikesLeft = 0
+const audioSingle = document.getElementById('audioSingle')
+const audioDouble = document.getElementById('audioDouble')
+function playNextSound() {
+  if (strikesLeft >= 2) {
+    audioDouble.fastSeek(0)
+    audioDouble.play()
+    strikesLeft -= 2
+  } else if (strikesLeft == 1) {
+    audioSingle.fastSeek(0)
+    audioSingle.play()
+    strikesLeft -= 1
+  }
+}
+audioSingle.addEventListener('ended', playNextSound)
+audioDouble.addEventListener('ended', playNextSound)
+
+const notifIconUrl = browser.extension.getURL('icons/bell-96.png')
+function handleBellTime() {
+  strikesLeft = strikesCount()
   if (
     options.notificationMethod == 'both' ||
     options.notificationMethod == 'notification'
   ) {
     browser.notifications.create({
       type: 'basic',
-      iconUrl: iconUrl,
+      iconUrl: notifIconUrl,
       title: 'Szklanka',
-      message: 'Wybijanie jednej szklanki',
+      message: `${strikesLeft} uderzeń w dzwon`,
     })
+  }
+  if (
+    options.notificationMethod == 'both' ||
+    options.notificationMethod == 'sound'
+  ) {
+    playNextSound()
   }
 }
 

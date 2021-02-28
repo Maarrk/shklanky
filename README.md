@@ -14,7 +14,7 @@ Browser extension to ring a bell every half hour in a [pattern used on ships](ht
 - [x] Implement [persistent](https://extensionworkshop.com/documentation/develop/testing-persistent-and-restart-features/) options
 - [x] Record own bell sounds
 - [x] Choose and include sounds license
-- [ ] Play multiple bell strikes (test using debug buttons in popup)
+- [x] Play multiple bell strikes (test using debug buttons in popup)
 - [x] Add options for enabling: sound, notifications
 - [ ] Clicking notification stops sound
 - [ ] Add silencing until: manually enabled, browser restarted, end of watch
