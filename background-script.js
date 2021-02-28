@@ -31,3 +31,10 @@ function scheduleBells() {
 }
 
 scheduleBells()
+
+function handleMessage(message) {
+  if (message.action == 'bellTimeNow') {
+    handleBellTime()
+  }
+}
+browser.runtime.onMessage.addListener(handleMessage)

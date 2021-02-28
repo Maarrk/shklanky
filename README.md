@@ -10,7 +10,7 @@ Browser extension to ring a bell every half hour in a [pattern used on ships](ht
 - [x] Create a basic icon
 - [x] Schedule playing with `alarm`
 - [x] Setup linter
-- [ ] Communicate with `browserAction` popup
+- [x] Communicate with `browserAction` popup
 - [ ] Implement [persistent](https://extensionworkshop.com/documentation/develop/testing-persistent-and-restart-features/) options
 - [x] Record own bell sounds
 - [x] Choose and include sounds license
