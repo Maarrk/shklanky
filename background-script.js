@@ -56,7 +56,8 @@ function handleBellTime() {
       type: 'basic',
       iconUrl: notifIconUrl,
       title: 'Szklanka',
-      message: `${strikesLeft} uderzeń w dzwon`,
+      message: `${strikesLeft} uderzeń w dzwon\n\n(kliknij aby wyciszyć)`,
+      // notification buttons are not supported as of firefox 86.0
     })
   }
   if (
@@ -96,3 +97,11 @@ function handleMessage(message) {
   }
 }
 browser.runtime.onMessage.addListener(handleMessage)
+
+function handleNotificationClick() {
+  // stop sound
+  audioSingle.pause()
+  audioDouble.pause()
+  strikesLeft = 0
+}
+browser.notifications.onClicked.addListener(handleNotificationClick)
