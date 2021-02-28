@@ -9,3 +9,10 @@ h1 {
 button {
   padding: 3px 5px;
 }
+
+.radiobutton-wrapper > span {
+  display: block;
+}
+.group-radio-buttons {
+  display: block;
+}

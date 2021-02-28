@@ -9,7 +9,8 @@
   },
   "permissions": [
     "alarms",
-    "notifications"
+    "notifications",
+    "storage"
   ],
   "background": {
     "page": "background-page.html"
@@ -23,5 +24,10 @@
   },
   "web_accessible_resources": [
     "sounds/*.mp3"
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "shklanky@lukasiewicz.tech"
+    }
+  }
 }

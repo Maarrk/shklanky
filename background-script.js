@@ -1,13 +1,35 @@
+var options = {
+  // specifies default options
+  notificationMethod: 'both',
+}
+function updateOptions() {
+  browser.storage.sync.get(options).then((results) => {
+    options = results
+  })
+}
+updateOptions()
+
 function handleBellTime() {
   const iconUrl = browser.extension.getURL('icons/bell-96.png')
-  var element = document.getElementById('audioSingle')
-  element.play()
-  browser.notifications.create({
-    type: 'basic',
-    iconUrl: iconUrl,
-    title: 'Szklanka',
-    message: 'Wybijanie jednej szklanki',
-  })
+  if (
+    options.notificationMethod == 'both' ||
+    options.notificationMethod == 'sound'
+  ) {
+    var element = document.getElementById('audioSingle')
+    element.fastSeek(0)
+    element.play()
+  }
+  if (
+    options.notificationMethod == 'both' ||
+    options.notificationMethod == 'notification'
+  ) {
+    browser.notifications.create({
+      type: 'basic',
+      iconUrl: iconUrl,
+      title: 'Szklanka',
+      message: 'Wybijanie jednej szklanki',
+    })
+  }
 }
 
 function scheduleBells() {
@@ -29,12 +51,13 @@ function scheduleBells() {
     periodInMinutes: 30,
   })
 }
-
 scheduleBells()
 
 function handleMessage(message) {
   if (message.action == 'bellTimeNow') {
     handleBellTime()
+  } else if (message.action == 'optionsChanged') {
+    updateOptions()
   }
 }
 browser.runtime.onMessage.addListener(handleMessage)

@@ -5,8 +5,23 @@
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <h1 id="myHeading">Szklanki</h1>
+    <h1>Szklanki</h1>
     <button id="buttonNow">Wybij szklanki</button>
+    <fieldset class="radiobutton-wrapper" id="notificationMethod" style="margin-top: 8px">
+      <legend>Wybierz metodę powiadamiania</legend>
+      <div class="group-radio-buttons">
+        <input name="methodChoice" value="both" id="method-1" type="radio" />
+        <label for="method-1">Dźwięk i powiadomienie</label>
+      </div>
+      <div class="group-radio-buttons">
+        <input name="methodChoice" value="sound" id="method-2" type="radio" />
+        <label for="method-2">Tylko dźwięk</label>
+      </div>
+      <div class="group-radio-buttons">
+        <input name="methodChoice" value="notification" id="method-3" type="radio" />
+        <label for="method-3">Tylko powiadomienie</label>
+      </div>
+    </fieldset>
     <script src="script.js"></script>
   </body>
 </html>
