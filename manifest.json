@@ -20,7 +20,7 @@
       "64": "icons/bell-64.png"
     },
     "default_popup": "browserAction/index.html",
-    "default_title": "shklanky"
+    "default_title": "Shklanky"
   },
   "web_accessible_resources": [
     "sounds/*.mp3"

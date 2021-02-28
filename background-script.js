@@ -63,6 +63,12 @@ function isMuted() {
 }
 
 function notifyMuteChanged() {
+  browser.browserAction.setIcon({
+    path: {
+      64: isMuted() ? 'icons/bell-gray-64.png' : 'icons/bell-64.png',
+    },
+  })
+
   browser.runtime.sendMessage({
     action: 'muteChanged',
     muted: isMuted(),
@@ -119,8 +125,10 @@ function handleBellTime() {
     browser.notifications.create({
       type: 'basic',
       iconUrl: notifIconUrl,
-      title: 'Szklanka',
-      message: `${strikesLeft} uderzeń w dzwon\n\n(kliknij aby wyciszyć)`,
+      title: 'Szklanki',
+      message: `${strikesLeft} uderzeń w dzwon${
+        options.notificationMethod == 'both' ? '\n\n(kliknij aby wyciszyć)' : ''
+      }`,
       // notification buttons are not supported as of firefox 86.0
     })
   }
