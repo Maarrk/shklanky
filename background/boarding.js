@@ -11,5 +11,5 @@ browser.runtime.onInstalled.addListener(async ({ reason, temporary }) => {
 })
 
 // open when reloading code with web-ext
-const url = browser.runtime.getURL('views/installed.html')
-browser.tabs.create({ url })
+// const url = browser.runtime.getURL('views/installed.html')
+// browser.tabs.create({ url })

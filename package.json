@@ -1,6 +1,6 @@
 {
   "name": "shklanky",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "Firefox extension to ring a bell every half hour in a pattern used on ships",
   "homepage": "https://github.com/Maarrk/shklanky#readme",
   "license": "MIT",
