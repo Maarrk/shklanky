@@ -25,6 +25,11 @@
     }
   },
 
+  "notificationMuteHint": {
+    "message": "(click to silence)",
+    "description": "Hint to silence the sound by clicking notification"
+  },
+
   "buttonNow": {
     "message": "Strike hour now",
     "description": "Button to sound the bell now"

@@ -25,6 +25,11 @@
     }
   },
 
+  "notificationMuteHint": {
+    "message": "(kliknij aby wyciszyć)",
+    "description": "Hint to silence the sound by clicking notification"
+  },
+
   "buttonNow": {
     "message": "Wybij szklanki teraz",
     "description": "Button to sound the bell now"

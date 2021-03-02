@@ -107,6 +107,16 @@ function unmute() {
   notifyMuteChanged()
 }
 
+function strikesText(count) {
+  let text = Array(Math.floor(count / 2))
+    .fill('••')
+    .join(' ')
+  if (count % 2 == 1) {
+    text += ' •'
+  }
+  return text
+}
+
 const notifIconUrl = browser.extension.getURL('icons/bell-96.png')
 function handleBellTime() {
   if (isMuted()) {
@@ -122,11 +132,21 @@ function handleBellTime() {
     options.notificationMethod == 'both' ||
     options.notificationMethod == 'notification'
   ) {
+    let message = browser.i18n.getMessage('notificationContent', strikesLeft)
+    if (options.notificationMethod == 'both') {
+      message += '\n\n' + browser.i18n.getMessage('notificationMuteHint')
+    }
+
+    let title =
+      browser.i18n.getMessage('notificationTitle') +
+      ' ' +
+      strikesText(strikesLeft)
+
     browser.notifications.create('bellTime', {
       type: 'basic',
       iconUrl: notifIconUrl,
-      title: browser.i18n.getMessage('notificationTitle'),
-      message: browser.i18n.getMessage('notificationContent', strikesLeft),
+      title: title,
+      message: message,
       // notification buttons are not supported as of firefox 86.0
     })
 
