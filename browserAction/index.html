@@ -5,31 +5,32 @@
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <h1>Szklanki</h1>
-    <button id="buttonNow">Wybij szklanki teraz</button>
+    <h1 data-i18n-msg="extensionName">Shklanky</h1>
+    <button id="buttonNow" data-i18n-msg="buttonNow">Strike hour now</button>
     <fieldset id="muteUntil" class="button-wrapper" style="margin-top: 16px">
-      <legend>Wstrzymaj szklanki</legend>
-      <button id="buttonMuteNext">Następną serię</button>
-      <button id="buttonMuteWatch">Do końca wachty</button>
-      <button id="buttonMuteRestart">Do zamknięcia przeglądarki</button>
-      <button id="buttonMutePermanent">Aż włączę ponownie</button>
+      <legend data-i18n-msg="muteLegend">Mute</legend>
+      <button id="buttonMuteNext" data-i18n-msg="muteNext">Next series</button>
+      <button id="buttonMuteWatch" data-i18n-msg="muteWatch">Until end of watch</button>
+      <button id="buttonMuteRestart" data-i18n-msg="muteRestart">Until browser restart</button>
+      <button id="buttonMutePermanent" data-i18n-msg="mutePermanent">Until manually enabled</button>
     </fieldset>
-    <button id="buttonUnmute">Wznów szklanki</button>
+    <button id="buttonUnmute" data-i18n-msg="buttonUnmute">Unmute</button>
     <fieldset class="radiobutton-wrapper" id="notificationMethod" style="margin-top: 8px">
-      <legend>Wybierz metodę powiadamiania</legend>
+      <legend data-i18n-msg="notificationLegend">Choose method of notifying</legend>
       <div class="group-radio-buttons">
         <input name="methodChoice" value="both" id="method-1" type="radio" />
-        <label for="method-1">Dźwięk i powiadomienie</label>
+        <label for="method-1" data-i18n-msg="notificationBoth">Sound and notification</label>
       </div>
       <div class="group-radio-buttons">
         <input name="methodChoice" value="sound" id="method-2" type="radio" />
-        <label for="method-2">Tylko dźwięk</label>
+        <label for="method-2" data-i18n-msg="notificationSound">Sound only</label>
       </div>
       <div class="group-radio-buttons">
         <input name="methodChoice" value="notification" id="method-3" type="radio" />
-        <label for="method-3">Tylko powiadomienie</label>
+        <label for="method-3" data-i18n-msg="notificationPopup">Notification only</label>
       </div>
     </fieldset>
     <script src="script.js"></script>
+    <script src="localize.js"></script>
   </body>
 </html>

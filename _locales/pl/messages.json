@@ -23,5 +23,60 @@
         "example" : "8"
       }
     }
+  },
+
+  "buttonNow": {
+    "message": "Wybij szklanki teraz",
+    "description": "Button to sound the bell now"
+  },
+
+  "muteLegend": {
+    "message": "Wstrzymaj szklanki",
+    "description": "Button group to mute the bell"
+  },
+
+  "muteNext": {
+    "message": "Następną serię",
+    "description": "Button to mute next series of strikes"
+  },
+
+  "muteWatch": {
+    "message": "Do końca wachty",
+    "description": "Button to mute strikes until end of this watch (4 hour period)"
+  },
+
+  "muteRestart": {
+    "message": "Do zamknięcia przeglądarki",
+    "description": "Button to mute strikes until the browser is restarted"
+  },
+
+  "mutePermanent": {
+    "message": "Aż włączę ponownie",
+    "description": "Button to mute strikes until manually enabled again"
+  },
+
+  "buttonUnmute": {
+    "message": "Wznów szklanki",
+    "description": "Button to resume bell strikes"
+  },
+
+  "notificationLegend": {
+    "message": "Wybierz metodę powiadamiania",
+    "description": "Controls group to select method of notifying when the bell is struck"
+  },
+
+  "notificationBoth": {
+    "message": "Dźwięk i powiadomienie",
+    "description": "Play sound and show notification when bell is struck"
+  },
+
+  "notificationSound": {
+    "message": "Tylko dźwięk",
+    "description": "Only play sound when bell is struck"
+  },
+
+  "notificationPopup": {
+    "message": "Tylko powiadomienie",
+    "description": "Only show notification when bell is struck"
   }
 }

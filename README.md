@@ -19,7 +19,7 @@ Browser extension to ring a bell every half hour in a [pattern used on ships](ht
 - [x] Clicking notification stops sound
 - [x] Add silencing until: manually enabled, browser restarted, end of watch
 - [x] Indicate silencing state on `browserAction` icon
-- [ ] Localize for Polish and English using [i18n](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n)
+- [x] Localize for Polish and English using [i18n](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n)
 - [ ] Add after install page according to [Onboarding tips](https://extensionworkshop.com/documentation/develop/onboard-upboard-offboard-users/)
 - [ ] Follow [Firefox's Photon Design System](https://design.firefox.com/photon/) where applicable
 - [ ] Build and test built extension
