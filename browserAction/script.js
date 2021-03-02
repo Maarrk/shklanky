@@ -22,12 +22,15 @@ function unmute() {
 }
 document.getElementById('buttonUnmute').addEventListener('click', unmute)
 
+const muteButtons = document
+  .getElementById('muteUntil')
+  .querySelectorAll('button')
 function handleMuteChanged(isMuted) {
   if (isMuted) {
-    document.getElementById('muteUntil').disabled = true
+    muteButtons.forEach((btn) => (btn.disabled = true))
     document.getElementById('buttonUnmute').disabled = false
   } else {
-    document.getElementById('muteUntil').disabled = false
+    muteButtons.forEach((btn) => (btn.disabled = false))
     document.getElementById('buttonUnmute').disabled = true
   }
 }

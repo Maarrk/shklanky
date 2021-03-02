@@ -3,33 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <link href="style.css" rel="stylesheet" />
+    <link href="../photon/index.css" rel="stylesheet" />
   </head>
   <body>
-    <h1 data-i18n-msg="extensionName">Shklanky</h1>
-    <button id="buttonNow" data-i18n-msg="buttonNow">Strike hour now</button>
-    <fieldset id="muteUntil" class="button-wrapper" style="margin-top: 16px">
+    <fieldset id="muteUntil" class="button-wrapper" style="margin-top: 8px">
       <legend data-i18n-msg="muteLegend">Mute</legend>
-      <button id="buttonMuteNext" data-i18n-msg="muteNext">Next series</button>
-      <button id="buttonMuteWatch" data-i18n-msg="muteWatch">Until end of watch</button>
-      <button id="buttonMuteRestart" data-i18n-msg="muteRestart">Until browser restart</button>
-      <button id="buttonMutePermanent" data-i18n-msg="mutePermanent">Until manually enabled</button>
+      <button id="buttonMuteNext" data-i18n-msg="muteNext" class="button--micro">Next series</button>
+      <button id="buttonMuteWatch" data-i18n-msg="muteWatch" class="button--micro">Until end of watch</button>
+      <button id="buttonMuteRestart" data-i18n-msg="muteRestart" class="button--micro">Until browser restart</button>
+      <button id="buttonMutePermanent" data-i18n-msg="mutePermanent" class="button--micro">
+        Until manually enabled
+      </button>
     </fieldset>
-    <button id="buttonUnmute" data-i18n-msg="buttonUnmute">Unmute</button>
+    <button id="buttonUnmute" data-i18n-msg="buttonUnmute" style="margin-top: 4px">Unmute</button>
     <fieldset class="radiobutton-wrapper" id="notificationMethod" style="margin-top: 8px">
       <legend data-i18n-msg="notificationLegend">Choose method of notifying</legend>
-      <div class="group-radio-buttons">
-        <input name="methodChoice" value="both" id="method-1" type="radio" />
-        <label for="method-1" data-i18n-msg="notificationBoth">Sound and notification</label>
-      </div>
-      <div class="group-radio-buttons">
-        <input name="methodChoice" value="sound" id="method-2" type="radio" />
-        <label for="method-2" data-i18n-msg="notificationSound">Sound only</label>
-      </div>
-      <div class="group-radio-buttons">
-        <input name="methodChoice" value="notification" id="method-3" type="radio" />
-        <label for="method-3" data-i18n-msg="notificationPopup">Notification only</label>
-      </div>
+      <label class="radio__label">
+        <input type="radio" name="methodChoice" value="both" class="radio" />
+        <span class="radio__label__text" data-i18n-msg="notificationBoth">Sound and notification</span>
+      </label>
+      <label class="radio__label">
+        <input type="radio" name="methodChoice" value="sound" class="radio" />
+        <span class="radio__label__text" data-i18n-msg="notificationBoth">Sound and notification</span>
+      </label>
+      <label class="radio__label">
+        <input type="radio" name="methodChoice" value="notification" class="radio" />
+        <span class="radio__label__text" data-i18n-msg="notificationSound">Sound only</span>
+      </label>
     </fieldset>
+    <button id="buttonNow" data-i18n-msg="buttonNow" class="button--primary" style="margin-top: 16px">
+      Strike hour now
+    </button>
     <script src="script.js"></script>
     <script src="localize.js"></script>
   </body>

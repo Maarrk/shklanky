@@ -31,8 +31,8 @@
   },
 
   "buttonNow": {
-    "message": "Strike hour now",
-    "description": "Button to sound the bell now"
+    "message": "Test now",
+    "description": "Button to test the bell now"
   },
 
   "muteLegend": {

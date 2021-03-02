@@ -1,22 +1,8 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-h1 {
-  font-style: bold;
-}
-
-button {
-  padding: 3px 5px;
-}
-
 .button-wrapper > button {
   display: block;
+  margin-bottom: 4px;
 }
 
-.radiobutton-wrapper > span {
-  display: block;
-}
-.group-radio-buttons {
+.radiobutton-wrapper > label {
   display: block;
 }

@@ -31,8 +31,8 @@
   },
 
   "buttonNow": {
-    "message": "Wybij szklanki teraz",
-    "description": "Button to sound the bell now"
+    "message": "Sprawdź teraz",
+    "description": "Button to test the bell now"
   },
 
   "muteLegend": {
