@@ -6,6 +6,7 @@ var options = {
 function updateOptions() {
   browser.storage.sync.get(options).then((results) => {
     options = results
+    browser.storage.sync.set(options)
   })
 }
 updateOptions()
