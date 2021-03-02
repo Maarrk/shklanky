@@ -1,0 +1,33 @@
+body {
+  background-color: #f9f9fa;
+}
+
+p {
+  margin-top: 24px;
+}
+
+.content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.title-container {
+  display: flex;
+}
+
+.caption {
+  font-size: 11px;
+  color: #737373;
+}
+
+.link--external:after {
+  background-image: url(./open-in-new-16.svg);
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  content: '';
+  display: inline-block;
+  height: 16px;
+  margin: -0.3rem 0.15rem 0 0.25rem;
+  vertical-align: middle;
+  width: 16px;
+}
