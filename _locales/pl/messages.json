@@ -83,5 +83,45 @@
   "notificationPopup": {
     "message": "Tylko powiadomienie",
     "description": "Only show notification when bell is struck"
+  },
+
+  "installReady": {
+    "message": "Wszystko gotowe!",
+    "description": "Extension ready header"
+  },
+
+  "installWatchSystem": {
+    "message": "Będziemy teraz wybijać szklanki w systemie czterogodzinnym (bez dwugodzinnych psich wacht).",
+    "description": "Explanation which watch system is used"
+  },
+
+  "installIconDescription": {
+    "message": "Wszystkie ustawienia są dostępne po kliknięciu w ikonę rozszerzenia - szukaj dzwonu okrętowego w prawym górnym rogu przeglądarki. Ta sama ikona jest wyświetlana na szaro kiedy wybijanie godziny jest wstrzymane.",
+    "description": "Description of browserAction icon functionality"
+  },
+
+  "installIconScreenshotCaption": {
+    "message": "Lokalizacja ikony na pasku narzędzi",
+    "description": "Caption to screenshot with the icon location"
+  },
+
+  "installThanks": {
+    "message": "Dzięki za instalację.",
+    "description": "Thanks to sueer for installing"
+  },
+
+  "installReport": {
+    "message": "Gdyby były jakieś skargi / wnioski / zażalenia zapraszam do zgłaszania ich w",
+    "description": "Invitation to report issues and suggestions"
+  },
+
+  "installRepoName": {
+    "message": "repozytorium",
+    "description": "The word for git repository"
+  },
+
+  "installGoodbye": {
+    "message": "Pomyślnych wiatrów i stopy wody pod kilem!",
+    "description": "A saying to wish a sailor good fortune"
   }
 }

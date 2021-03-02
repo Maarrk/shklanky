@@ -83,5 +83,45 @@
   "notificationPopup": {
     "message": "Notification only",
     "description": "Only show notification when bell is struck"
+  },
+
+  "installReady": {
+    "message": "All's ready!",
+    "description": "Extension ready header"
+  },
+
+  "installWatchSystem": {
+    "message": "We'll now be watchkeeping in the simple system (with no two-hour dog watches).",
+    "description": "Explanation which watch system is used"
+  },
+
+  "installIconDescription": {
+    "message": "All settings are available after clicking the extension's icon - look for a ship's bell in the top right corner of your browser. The same icon is displayed in gray when the extension is muted.",
+    "description": "Description of browserAction icon functionality"
+  },
+
+  "installIconScreenshotCaption": {
+    "message": "Icon location in the toolbar",
+    "description": "Caption to screenshot with the icon location"
+  },
+
+  "installThanks": {
+    "message": "Thanks for installing.",
+    "description": "Thanks to sueer for installing"
+  },
+
+  "installReport": {
+    "message": "If you have any issues or suggestions, I invite you to report them in",
+    "description": "Invitation to report issues and suggestions"
+  },
+
+  "installRepoName": {
+    "message": "the repository",
+    "description": "The word for git repository"
+  },
+
+  "installGoodbye": {
+    "message": "May you have fair winds and following seas!",
+    "description": "A saying to wish a sailor good fortune"
   }
 }
