@@ -23,9 +23,6 @@
     "default_popup": "browserAction/index.html",
     "default_title": "__MSG_extensionName__"
   },
-  "web_accessible_resources": [
-    "sounds/*.mp3"
-  ],
   "browser_specific_settings": {
     "gecko": {
       "id": "shklanky@lukasiewicz.tech"
