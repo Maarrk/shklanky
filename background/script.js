@@ -66,7 +66,7 @@ function isMuted() {
 function notifyMuteChanged() {
   browser.browserAction.setIcon({
     path: {
-      64: isMuted() ? 'icons/bell-gray-64.png' : 'icons/bell-64.png',
+      64: isMuted() ? '../icons/bell-gray-64.png' : '../icons/bell-64.png',
     },
   })
 
@@ -118,7 +118,7 @@ function strikesText(count) {
   return text
 }
 
-const notifIconUrl = browser.extension.getURL('icons/bell-96.png')
+const notifIconUrl = browser.extension.getURL('../icons/bell-96.png')
 function handleBellTime() {
   if (isMuted()) {
     if (nextStrikesMuted) {

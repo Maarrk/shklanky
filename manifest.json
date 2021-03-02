@@ -14,7 +14,7 @@
     "storage"
   ],
   "background": {
-    "page": "background-page.html"
+    "page": "background/index.html"
   },
   "browser_action": {
     "default_icon": {
