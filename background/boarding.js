@@ -1,6 +1,5 @@
-// eslint-disable-next-line no-unused-vars
 browser.runtime.onInstalled.addListener(async ({ reason, temporary }) => {
-  // if (temporary) return // skip during development
+  if (temporary) return
   switch (reason) {
     case 'install':
       {
@@ -10,3 +9,7 @@ browser.runtime.onInstalled.addListener(async ({ reason, temporary }) => {
       break
   }
 })
+
+// open when reloading code with web-ext
+const url = browser.runtime.getURL('views/installed.html')
+browser.tabs.create({ url })
