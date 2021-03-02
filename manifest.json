@@ -21,7 +21,7 @@
       "64": "icons/bell-64.png"
     },
     "default_popup": "browserAction/index.html",
-    "default_title": "Shklanky"
+    "default_title": "__MSG_extensionName__"
   },
   "web_accessible_resources": [
     "sounds/*.mp3"

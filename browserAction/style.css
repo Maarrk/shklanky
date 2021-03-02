@@ -1,6 +1,13 @@
+fieldset {
+  border-radius: 2px;
+  border-width: 1px;
+  border-color: rgba(12, 12, 13, 0.3);
+}
+
 .button-wrapper > button {
   display: block;
   margin-bottom: 4px;
+  width: 100%;
 }
 
 .radiobutton-wrapper > label {
