@@ -24,3 +24,5 @@ Browser extension to ring a bell every half hour in a [pattern used on ships](ht
 - [x] Follow [Firefox's Photon Design System](https://design.firefox.com/photon/) where applicable
 - [x] Build and test built extension
 - [x] Publish extension at [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/shklanky/)
+- [ ] Dark theme matching Firefox
+- [ ] Onboarding page title
